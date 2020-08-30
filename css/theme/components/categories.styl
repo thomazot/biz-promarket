@@ -1,5 +1,10 @@
 @media media-max-lg
     .categories
+        &__show
+            order: -1
+            background: var(--primary-contrast)
+            color: var(--primary)
+
         .parent
             position: relative
 
@@ -48,6 +53,9 @@
         min-width: 0
         background: none
 
+        &__all
+            display: none
+
         .a--0
             color: var(--primary)
             text-transform: uppercase
@@ -57,6 +65,3 @@
 
         .li--0
             order: 1
-
-        &__all
-            order: 2
