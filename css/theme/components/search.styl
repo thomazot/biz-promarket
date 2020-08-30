@@ -1,9 +1,19 @@
 .search
+    --color: #c5c5c5
+
+    .header &
+        @media media-min-sm
+            flex: 0 1 240px
+            border-bottom: solid 1px var(--color)
+
+        @media media-min-lg
+            margin: 0 35px
+
     &__button
         background: var(--primary-contrast)
         color: var(--primary)
 
-        @media media-max-lg
+        @media media-max-sm
             span
                 display: none
 
@@ -12,6 +22,57 @@
 
                 font-size: 15px
 
+        @media media-min-sm
+            padding: 13px 0
+            border: 0
+            box-shadow: none
+            color: var(--secundary)
+            font-weight: bold
+            font-size: 14px
+            line-height: 1
+
         &:hover
             background: var(--primary-constrast)
             color: var(--primary)
+
+    &__input
+        .header .search.on &
+            @media media-max-sm
+                height: 70px
+                border-radius: 0 !important
+
+        .header &
+            color: var(--color)
+
+            &::placeholder
+                color: var(--color)
+
+            &:focus
+                &::placeholder
+                    color: transparent
+
+            @media media-min-sm
+                height: 40px
+                border: 0 !important
+                border-radius: 0
+                box-shadow: none
+
+    &__hide
+        .header &
+            display: flex
+            justify-content: center
+            align-items: center
+            height: 65px
+
+    &__label
+        @media media-max-sm
+            display: none
+
+        @media media-min-sm
+            display: flex
+            justify-content: center
+            align-items: center
+            margin: 0
+            height: 40px
+            color: var(--primary)
+            font-size: 14px

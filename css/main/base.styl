@@ -1452,41 +1452,6 @@ form.searchautocomplete
 .mycart
     position: relative
     z-index: 20
-    height: 2.75rem
-
-.mycart__header a
-    position: relative
-    display: flex
-    justify-content: center
-    align-items: center
-    width: 2.75rem
-    height: 2.75rem
-    border-radius: 100%
-    box-shadow: inset 0 0 0 1px color1_bg
-
-.mycart__header .ico
-    max-height: none
-    width: 1rem
-    height: 1rem
-    fill: color1_bg
-
-.mycart__header .text
-    display: none
-
-.mycart__header .qtd
-    position: absolute
-    top: 0
-    right: -.25rem
-    width: 1rem
-    height: 1rem
-    border-radius: 100%
-    background: color1_bg_hover
-    color: color1_font_hover
-    text-align: center
-    text-indent: -1.5px
-    letter-spacing: -.1em
-    font-size: .7rem
-    line-height: 1rem
 
 .mycart__content
     position: absolute
@@ -1520,12 +1485,6 @@ form.searchautocomplete
 
 .mycart:hover .mycart__content
     display: block
-
-.mycart:hover .mycart__header a
-    background: color1_bg
-
-.mycart:hover .mycart__header .ico
-    fill: color1_font
 
 .mycart__list
     overflow: auto
@@ -1619,42 +1578,6 @@ form.searchautocomplete
 .myaccount
     position: relative
     z-index: 20
-    height: 2.75rem
-
-.myaccount__header a
-    position: relative
-    display: flex
-    justify-content: center
-    align-items: center
-    overflow: hidden
-    width: 2.75rem
-    height: 2.75rem
-    border-radius: 100%
-    box-shadow: inset 0 0 0 1px color1_bg
-
-.myaccount__header .thumb
-    position: absolute
-    top: 0
-    left: 0
-
-.myaccount__header .thumb img
-    display: block
-    min-width: 100%
-    width: auto
-    height: 2.75rem
-
-.myaccount__header .thumb:empty
-    display: none
-
-.myaccount__header .ico
-    margin: 0
-    max-height: none
-    width: 2.75rem
-    height: 2.75rem
-    fill: color1_bg
-
-.myaccount__header .name, .myaccount__header .text
-    display: none
 
 .myaccount__content
     position: absolute
@@ -1686,9 +1609,6 @@ form.searchautocomplete
 
 .myaccount:hover .myaccount__content
     display: block
-
-.myaccount:hover .myaccount__header a
-    background: rgba(0, 173, 239, .1)
 
 #i-user .female
     display: none
@@ -2844,9 +2764,6 @@ body.ie .owl-prev:before, body.ie .owl-next:before
     flex: 1 1 auto
     margin-left: 1rem
 
-.header .mywish, .header .mycart, .header .myaccount, .header .loginout
-    margin-left: 1rem
-
 .header .loginout
     text-align: right
 
@@ -2892,14 +2809,6 @@ body.ie .owl-prev:before, body.ie .owl-next:before
 
 .footer a:hover
     color: color1_font_hover
-
-.footer .myaccount__header a
-    margin-left: auto
-    background: #fff !important
-    box-shadow: 0 0 0 4px #fff
-
-.footer .myaccount__header a:hover
-    box-shadow: 0 0 0 4px #fff, 0 1rem 1rem -.5rem rgba(0, 0, 0, .3)
 
 .footer .myaccount__content
     display: none !important
@@ -9462,9 +9371,6 @@ table .change-product-link:hover
     .mycart.on .mycart__content
         transform: translateX(0)
 
-    .mycart__header .ico
-        fill: color1_bg !important
-
     .mycart__hide
         display: block
         margin: -1rem -1rem 1rem
@@ -9710,7 +9616,7 @@ table .change-product-link:hover
     .header-container .loginout
         display: none
 
-    .header-container .mywish__header a, .header-container .mycart__header a, .header-container .myaccount__header a
+    .header-container .mywish__header a
         background: color1_font !important
         box-shadow: none
 
@@ -9776,13 +9682,6 @@ table .change-product-link:hover
     .header .myaccount, .header .mycart
         z-index: 10
         margin-left: 0
-
-    .header .myaccount__header, .header .mycart__header
-        padding: .375rem
-
-    .header .myaccount__header a, .header .mycart__header a
-        width: 2rem
-        height: 2rem
 
 /* ------ Footer */
 /* ~1408px */

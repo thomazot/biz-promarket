@@ -1,7 +1,23 @@
 .header
-    padding: 25px 0
     border-top: solid 2px var(--secundary)
+    transition: all .2s ease-in-out
+
+    @media media-max-sm
+        padding: 10px 0
+
+        .scrolling &
+            padding: 5px 0
+
+    @media media-min-sm
+        padding: 25px 0
+
+        .scrolling &
+            padding: 15px 0
 
     &-container
         position: sticky
         top: 0
+        box-shadow: none
+
+        .scrolling &
+            box-shadow: 0 0 20px rgba(0, 0, 0, .1)

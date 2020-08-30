@@ -5,6 +5,10 @@
             background: var(--primary-contrast)
             color: var(--primary)
 
+            &:hover
+                background: @background
+                color: @color
+
         .parent
             position: relative
 
@@ -49,7 +53,7 @@
 @media media-min-lg
     .categories
         flex: 1
-        margin-bottom: 0 !important
+        margin: -25px 0
         min-width: 0
         background: none
 
@@ -57,11 +61,39 @@
             display: none
 
         .a--0
-            color: var(--primary)
-            text-transform: uppercase
+            padding: 0
+            height: 100px
+            color: var(--secundary)
             white-space: nowrap
-            font-weight: semibold
+            font-weight: medium
             font-size: 14px
 
+            span
+                position: relative
+
+                &:after
+                    position: absolute
+                    bottom: 0
+                    left: 50%
+                    max-width: 0
+                    width: 100%
+                    height: 1px
+                    background: var(--secundary)
+                    content: ''
+                    transition: all .2s ease
+                    transform: translateX(-50%)
+
         .li--0
-            order: 1
+            flex: 0 0 auto
+
+            &:hover
+                .a--0
+                    background: none
+                    color: var(--secundary)
+
+                    span
+                        &:after
+                            max-width: 100%
+
+        .ul--0
+            justify-content: space-around
