@@ -1368,3 +1368,8 @@ $j(document)
         // Safe ajax completed
         // Dispara apÃ³s completar com sucesso qualquer requisiÃ§Ã£o Ajax, e trÃ¡s a resposta do Ajax.
     })
+
+$j(window).load(function () {
+    default_categories_justify()
+    $j('body').addClass('categories--on')
+})

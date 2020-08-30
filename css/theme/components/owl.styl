@@ -1,0 +1,27 @@
+.owl
+    &-next, &-prev
+        background: none
+        box-shadow: none
+        color: var(--secundary)
+        font-size: 14px
+        opacity: .5
+        transition: all .2s ease
+
+        .header-container + .banner &
+            color: var(--secundary-contrast)
+            opacity: 1
+
+        &:hover
+            background: @background
+            color: @color
+
+            @media media-min-lg
+                opacity: 1
+
+    &-next
+        &:before
+            icon('\f061')
+
+    &-prev
+        &:before
+            icon('\f060')
