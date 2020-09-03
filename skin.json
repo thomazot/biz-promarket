@@ -1,12 +1,12 @@
 {
-    "protocol": "http",
-    "host": "nexybrand.loja.biz",
+    "protocol": "https",
+    "host": "lojapromarket.loja.biz",
     "browsers": [">1%"],
     "pxtorem": {
         "rootValue": 16,
         "unitPrecision": 2
     },
-    "theme": "neon",
+    "theme": "promarket",
     "backstop": {
         "local": false,
         "id": "backstop_default",

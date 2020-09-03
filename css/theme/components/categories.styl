@@ -1,5 +1,17 @@
+.categories
+    --background: #f9f9f9
+
 @media media-max-lg
     .categories
+        &__show
+            order: -1
+            background: var(--primary-contrast)
+            color: var(--primary)
+
+            &:hover
+                background: @background
+                color: @color
+
         .parent
             position: relative
 
@@ -27,7 +39,7 @@
                 align-items: center
                 width: 48px
                 height: 48px
-                background: var(--primary-contrast)
+                color: var(--primary-contrast)
                 font-size: 20px
                 transition: all .2s ease
 
@@ -43,20 +55,107 @@
 
 @media media-min-lg
     .categories
-        flex: 1
-        margin-bottom: 0 !important
-        min-width: 0
-        background: none
+        --pos-left: 390px
 
-        .a--0
-            color: var(--primary)
-            text-transform: uppercase
-            white-space: nowrap
-            font-weight: semibold
-            font-size: 14px
+        &
+            position: static
+            visibility: hidden
+            flex: 1
+            margin: -25px 0
+            min-width: 0
+            background: none
 
-        .li--0
-            order: 1
+        .categories--on &
+            visibility: visible
 
         &__all
-            order: 2
+            display: none
+
+        .a--0
+            padding: 0 5px
+            height: 100px
+            color: var(--secundary)
+            white-space: nowrap
+            font-weight: medium
+            font-size: 14px
+
+            span
+                position: relative
+
+                &:after
+                    position: absolute
+                    bottom: 0
+                    left: 50%
+                    max-width: 0
+                    width: 100%
+                    height: 1px
+                    background: var(--secundary)
+                    content: ''
+                    transition: all .2s ease
+                    transform: translateX(-50%)
+
+        .a--1
+            padding: 5px 20px
+            color: var(--primary)
+            font-weight: medium
+            font-size: 16px
+
+            &:hover
+                text-decoration: underline
+
+        .li--0
+            position: static
+            flex: 0 0 auto
+
+            &:hover
+                .a--0
+                    background: none
+                    color: var(--secundary)
+
+                    span
+                        &:after
+                            max-width: 100%
+
+        .li--1
+            max-width: 24.38rem
+
+        .ul--0
+            position: static
+            justify-content: space-around
+
+        .ul--1
+            container()
+
+            position: relative
+            flex: 0 0 auto
+            margin: 0 auto
+
+            &:before
+                display: block
+                margin: 20px 0
+                color: var(--secundary)
+                content: attr(data-title)
+                font-weight: bold
+                font-size: 24px
+
+        .box--1
+            min-height: 400px
+            width: 100%
+            background: var(--background)
+
+            shadowBorder()
+
+        &__block
+            position: absolute
+            top: 0
+            left: var(--pos-left)
+            padding: 0
+            height: 100%
+
+            > *
+                height: 100%
+
+            img
+                width: 100%
+                height: 100%
+                object-fit: cover

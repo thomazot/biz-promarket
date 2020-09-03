@@ -1,0 +1,40 @@
+.footer
+    --color: #bab9b9
+    --border-color: #efefef
+
+    @media media-max-lg
+        text-align: center
+
+    .flex--a-center
+        @media media-max-lg
+            justify-content: center
+
+    &-container
+        background: none
+
+    &__row
+        padding: 45px 0
+
+        @media media-min-lg
+            display: flex
+            justify-content: space-between
+
+        &:not(.footer__row--white)
+            shadowBorder()
+
+            background: var(--primary)
+
+    &__title
+        padding: 10px 0
+        color: var(--secundary)
+        font-weight: bold
+        font-size: 16px
+
+        .footer__row--white &
+            color: var(--primary)
+
+    &__copyright
+        padding: 25px 0
+        border-top: solid 1px var(--border-color)
+        color: var(--color)
+        text-align: center

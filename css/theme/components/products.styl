@@ -1,0 +1,38 @@
+.products
+    --border-color: #b2c0d6
+
+    .owl-pagination
+        display: none
+
+    &__case
+        box-shadow: none
+
+    &__title
+        padding-top: 35px
+        border-top: solid 1px var(--border-color)
+        color: var(--secundary)
+        font-weight: bold
+        font-size: 20px
+
+.product
+    &__brand
+        --color: #adb2bb
+
+        &
+            color: var(--color)
+            font-weight: medium
+            font-size: 12px
+
+        a
+            color: currentColor
+
+            &:before
+                content: attr(title)
+
+        img
+            display: none
+
+    &__name
+        color: var(--primary-hover)
+        font-weight: bold
+        font-size: 16px
