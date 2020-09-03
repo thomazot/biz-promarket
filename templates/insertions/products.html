@@ -1,0 +1,24 @@
+<h2 class="product__header">
+    <a href="@url" itemprop="url" title="Mais detalhes" class="product-link">
+        <span class="product__image product-image">@foto(260x260)</span>
+    </a>
+</h2>
+<div class="product__main">
+    <div class="product__brand">@marca</div>
+	<a href="@url" title="@nome(60)" class="product__name">@nome</a>
+
+    <div class="msg-login">
+        <i class="icon icon-user"></i>
+        <div>
+            Faça o Login ou Cadastre-se
+            para ver o valor do produto
+        </div>
+    </div>
+
+	@if(is_disponivel)
+		@preco
+        @preco(parcelado)
+    @else(is_disponivel)
+        <div class="esgotado">Produto Esgotado</div>
+	@endif(is_disponivel)
+</div>

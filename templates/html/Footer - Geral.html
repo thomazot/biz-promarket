@@ -1,0 +1,65 @@
+<div class="footer__row">
+    <div class="footer__col">
+        <div class="footer__box">
+            <h3 class="footer__title">Central de Atendimento</h3>
+            <div class="footer__content">
+                {{block type="menubuilder/output" identifier="promarket-footer-ceentral-de-atendimento"}}
+            </div>
+        </div>
+    </div>
+
+    <div class="footer__col">
+        <div class="footer__box">
+            <h3 class="footer__title">Institucional</h3>
+            <div class="footer__content">
+                {{block type="menubuilder/output" identifier="promarket-footer-institucional"}}
+            </div>
+        </div>
+        <div class="footer__box">
+            <h3 class="footer__title">Acesse sua conta</h3>
+            <div class="footer__content">
+                {{block type="menubuilder/output" identifier="promarket-footer-acesse-sua-conta"}}
+            </div>
+        </div>
+    </div>
+
+    <div class="footer__col">
+        <div class="footer__box">
+            <h3 class="footer__title">Categorias</h3>
+            <div class="footer__content">
+                {{block type="menubuilder/output" identifier="promarket-footer-categorias"}}
+            </div>
+        </div>
+    </div>
+
+    <div class="footer__col">
+        <div class="footer__box">
+            <h3 class="footer__title">Dúvidas</h3>
+            <div class="footer__content">
+                {{block type="menubuilder/output" identifier="promarket-footer-duvidas"}}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer__row footer__row--white">
+    <div class="footer__col">
+        <h3 class="footer__title">Formas de Pagamento</h3>
+
+        {{widget type="interface/widget_pagtos" template="interface/widgets/pagtos.phtml" identificador="pagtos_footer" pagtos="all"}}
+    </div>
+    <div class="footer__col">
+        <h3 class="footer__title">Segurança</h3>
+        
+        {{widget type="interface/widget_seals" template="interface/widgets/seals.phtml" identificador="selos_footer" seals="all"}}
+    </div>
+    <div class="footer__col">
+        <h3 class="footer__title">Redes Sociais</h3>
+
+        {{widget type="interface/widget_social" template="interface/widgets/social.phtml" identificador="socials" redes="1,6,5"}}
+    </div>
+</div>
+
+<div class="footer__copyright">
+    © Copyright 2020 | Todos os direitos reservados
+</div>

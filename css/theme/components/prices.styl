@@ -1,0 +1,41 @@
+.price-box
+    --old-price: #adb2bb
+    --special-price: #ee7203
+
+    &
+        margin-bottom: 0
+
+    .products &
+        .old-price
+            margin-bottom: 0
+            line-height: 1.5
+
+            .label, .price
+                span
+                    color: var(--old-price)
+                    font-weight: medium
+                    font-size: 12px
+
+            .price
+                text-decoration: none
+
+        .special-price, .regular-price, .minimal-price
+            line-height: 1.5
+
+            .label, .price
+                span
+                    color: var(--special-price)
+                    font-weight: bold
+                    font-size: 18px
+
+.price-box-parcelado
+    --payment: #2c4c87
+
+    .preco-parcelado
+        &:before
+            content: 'ou em '
+
+    &, .num, .value span
+        color: var(--payment)
+        font-weight: regular
+        font-size: 12px
