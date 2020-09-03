@@ -1,0 +1,45 @@
+.filters
+    --color: #717171
+
+    @media media-min-lg
+        > .title
+            display: none
+
+        &__name
+            color: var(--primary)
+            font-weight: bold
+            font-size: 20px
+
+        .a--0, .a--1, .a--0current
+            color: var(--color)
+            font-weight: medium
+            font-size: 14px
+
+    @media media-max-lg
+        &__name
+            color: var(--primary-contrast)
+            font-weight: bold
+            font-size: 20px
+
+        &__swatches
+            .swatch
+                background: #ffffff
+
+        a, .a--1
+            color: #fff
+
+        .ul--1
+            padding-bottom: 15px
+
+    &__swatches
+        .swatch
+            display: flex
+            justify-content: center
+            align-items: center
+            padding: 5px
+            min-height: 2rem
+            height: auto
+            line-height: 1.3
+
+    .count
+        display: none

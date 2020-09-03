@@ -1,11 +1,17 @@
 .products
     --border-color: #b2c0d6
+    --border-hover-color: #ebebeb
 
     .owl-pagination
         display: none
 
     &__case
+        border-radius: 3px
         box-shadow: none
+
+        &:hover
+            @media media-min-lg
+                box-shadow: 0 0 0 1px var(--border-hover-color)
 
     &__title
         padding-top: 35px

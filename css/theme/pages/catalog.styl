@@ -1,0 +1,29 @@
+.ias-noneleft
+    display: none !important
+
+.category-image
+    container()
+
+.category-title, .search-title
+    h1
+        font-weight: bold
+        font-size: 20px
+
+        small
+            font-size: 18px
+
+.catalog-category-view, .catalogsearch-result-index
+    .col-main
+        @media media-min-lg
+            display: grid
+            grid-template-areas: 'title toolbar' 'products-list products-list'
+            grid-template-columns: 1fr 200px
+
+    .page-title
+        grid-area: title
+
+    .toolbar
+        grid-area: toolbar
+
+    .category__products
+        grid-area: products-list
