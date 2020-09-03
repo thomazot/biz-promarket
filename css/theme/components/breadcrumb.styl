@@ -1,0 +1,26 @@
+.breadcrumb
+    --color: #717171
+
+    &__link
+        color: var(--color)
+        font-weight: medium
+        font-size: 12px
+
+        .breadcrumb__home &
+            &:before
+                display: none
+
+    &__last
+        color: var(--primary)
+        font-weight: bold
+        font-size: 12px
+
+    &__sep
+        color: var(--primary)
+        font-size: 8px
+
+        &:before
+            icon('\f054')
+
+        span
+            display: none

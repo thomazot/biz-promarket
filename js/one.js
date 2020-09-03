@@ -1380,6 +1380,12 @@ $j(document)
         $(window).resize(function () {
             calcPosBoxLeft()
         })
+
+        var bannerCategoria = $('.category-image')
+
+        if (bannerCategoria.length) {
+            $('.header-container').after(bannerCategoria)
+        }
     })
     .on('resizeStop', function (e) {
         // Safe window.resize
