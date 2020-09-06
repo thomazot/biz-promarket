@@ -1,0 +1,47 @@
+.qty-wrapper
+    --color: #7f7f7f
+    --border-color: #ecedf2
+
+    &
+        display: inline-block
+        border: solid 1px var(--border-color)
+        border-radius: 3px
+
+    .bt-box
+        display: contents
+
+    .input-box
+        display: flex
+        align-items: stretch
+
+    .input-text
+        height: 53px
+        border: 0
+        box-shadow: none
+        color: var(--primary-hover)
+        font-weight: bold
+        font-size: 18px
+
+    .less
+        order: -1
+
+    .bt
+        &.less, &.plus
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 30px
+            height: auto
+            border-radius: 0
+
+            &:hover
+                background: none
+
+            &:before
+                display: none
+
+            span
+                display: block
+                color: var(--color)
+                font-weight: bold
+                font-size: 18px

@@ -98,12 +98,6 @@
          * addSVG() - defaults
          */
         if (neon.default_SVGs !== false) {
-            var truck = {
-                'img-truck': {
-                    selector: '.frete__title',
-                    mode: 'append',
-                },
-            }
             var svgs = {
                 'img-truck': {
                     selector:
@@ -158,7 +152,6 @@
             }
             $j(document).ready(function () {
                 addSVG(svgs)
-                addSVG(truck)
             })
         }
         if (neon.addSVG !== false) {
@@ -1245,8 +1238,8 @@ $j.fn.neonTheme.custom = {
      */
     dropFrom: false,
     addSVG: {
-        'img-truck': {
-            selector: '.frete .frete__content .input-box label',
+        'z-truck': {
+            selector: '.frete__title',
             mode: 'prepend',
             ratio: false,
         },

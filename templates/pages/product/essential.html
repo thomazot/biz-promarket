@@ -1,0 +1,48 @@
+<div class="prod__img">
+    @fotos
+    @selos
+
+    <div class="prod__tabs">
+        <h3 class="prod__tabs-tab prod__tabs-tab--actived">Ficha Técnica</h3>
+        <div class="prod__tabs-content prod__tabs-content--actived">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            <a href="#">Ver descrição completa</a>
+        </div>
+        <h3 class="prod__tabs-tab">Videos</h3>
+        <div class="prod__tabs-content">
+            video
+        </div>
+    </div>
+</div>
+<div class="prod__shop">	
+	<div class="col">	
+		<div class="prod__name">
+			<h1>@nome</h1>
+			<small class="sku">SKU: @atributo(sku)</small>
+		</div>
+
+        @if(short_description)
+        <div class="prod__short-desc">
+            <h3>Descrição</h3>
+            @descricao(curta)
+        </div>
+        @endif(short_description)
+
+        @variacoes
+
+		@if(is_disponivel)
+			@preco
+			@preco(avista)
+			@preco(parcelado)	
+        
+            @bt(comprar)
+        
+            @simulador-frete
+		@else(is_disponivel)		
+			<div class="prod__esgotado">
+				<div class="title title--sm">Produto Esgotado</div>
+				@alertas
+			</div>
+		@endif(is_disponivel)
+	</div>
+</div>

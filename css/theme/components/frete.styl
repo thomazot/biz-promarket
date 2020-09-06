@@ -1,0 +1,91 @@
+.frete
+    position: relative
+    padding: 20px
+    border-radius: 2px
+    background: var(--primary-hover)
+
+    @media media-min-sm
+        display: flex
+        flex-flow: row wrap
+
+    &__content
+        display: block
+        flex: 1
+        min-width: 0
+
+    &__title
+        flex: 0 0 170px
+        justify-content: flex-start
+        margin: 0
+        box-shadow: none
+        color: var(--primary-contrast)
+        text-align: left
+        font-weight: bold
+
+        .ico
+            width: 41px
+            height: 25px
+
+        span
+            display: none
+
+        &:after
+            padding-bottom: 18px
+            content: 'Calcule o Envio'
+
+    &__results
+        flex: 0 0 100%
+
+    &__naosei
+        position: relative
+        position: absolute
+        top: 35px
+        left: 80px
+        color: var(--primary-contrast)
+        font-weight: medium
+        font-size: 12px
+        opacity: .6
+
+        &:hover
+            color: var(--primary-contrast)
+
+    &__form
+        display: flex
+        flex: 1
+        min-width: 0
+        border: solid 1px var(--primary-contrast)
+        border-radius: 3px
+
+        @media media-min-lg
+            flex: 0 1 180px
+            max-width: 180px
+
+        .input-box
+            flex: 1
+            min-width: 0
+
+        label
+            &.cep
+                display: none
+
+        .input-text
+            border: 0
+            background: none
+            box-shadow: none
+            color: var(--primary-contrast)
+            font-weight: medium
+            font-size: 12px
+
+            &::placeholder
+                color: var(--primary-contrast)
+
+    &__actions
+        .btn
+            background: none
+            box-shadow: none
+            color: var(--primary-contrast)
+            font-weight: bold
+            font-size: 16px
+
+            &:hover
+                background: none
