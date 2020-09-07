@@ -1239,7 +1239,7 @@ $j.fn.neonTheme.custom = {
     dropFrom: false,
     addSVG: {
         'z-truck': {
-            selector: '.frete__title',
+            selector: '.frete__title, .shipping > .title',
             mode: 'prepend',
             ratio: false,
         },
