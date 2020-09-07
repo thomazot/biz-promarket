@@ -12931,6 +12931,12 @@ body:not(.user-logged) .msg-login {
     border: solid 1px var(--border-color);
     border-radius: 2px;
   }
+  .prod__shop .col {
+    display: flex;
+    flex: 1;
+    flex-flow: column nowrap;
+    min-width: 0;
+  }
 }
 .prod__shop .price-box {
   margin: 0;
@@ -12993,6 +12999,7 @@ body:not(.user-logged) .msg-login {
 }
 @media (min-width: 993px) {
   .prod__shop .frete {
+    margin-top: auto;
     margin-right: -1.25rem;
     margin-bottom: -1.25rem !important;
     margin-left: -1.25rem;

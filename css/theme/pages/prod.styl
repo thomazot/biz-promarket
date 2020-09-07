@@ -39,6 +39,12 @@
             border: solid 1px var(--border-color)
             border-radius: 2px
 
+            .col
+                display: flex
+                flex: 1
+                flex-flow: column nowrap
+                min-width: 0
+
         .price-box
             margin: 0
 
@@ -99,6 +105,7 @@
 
         .frete
             @media media-min-lg
+                margin-top: auto
                 margin-right: -20px
                 margin-bottom: -20px !important
                 margin-left: -20px
