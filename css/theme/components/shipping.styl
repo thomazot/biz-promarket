@@ -1,0 +1,61 @@
+.shipping, .coupon
+    display: flex
+    flex-flow: row wrap
+    align-items: center
+    background: none
+    box-shadow: none
+    color: var(--primary-contrast)
+
+    .title
+        display: flex
+        align-items: center
+        margin-right: 10px
+        margin-bottom: 0
+        font-weight: bold
+        font-size: 14px
+
+        .ico
+            margin-right: 10px
+            width: 41px
+            height: 25px
+
+    .input-text
+        border: 0 !important
+        background: none
+        box-shadow: none
+        color: var(--primary-contrast)
+
+        &::placeholder
+            color: var(--primary-contrast)
+
+    &__postcode label
+        display: none
+
+    &__form
+        flex: 1
+        margin-bottom: 0
+        min-width: 0
+        border: solid 1px var(--primary-contrast)
+        border-radius: 3px
+
+    &__action
+        .btn
+            background: none
+            box-shadow: none
+            text-transform: none
+            font-weight: bold
+            font-size: 16px
+
+            span
+                display: none
+
+            &:before
+                content: 'ok'
+
+            &:hover
+                background: none
+
+    form
+        + form
+            flex: 0 0 100%
+            margin-top: 20px

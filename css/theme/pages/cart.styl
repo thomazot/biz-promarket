@@ -1,0 +1,121 @@
+.cart-table
+    --border-color: #ecedf2
+    --color: #717171
+
+    &
+        border: solid 1px var(--border-color)
+        border-radius: 3px
+
+    header
+        background: #ffffff
+        color: var(--primary-hover)
+        text-transform: none
+        font-weight: bold
+        font-size: 14px
+
+    main
+        border: 0
+
+    footer, .item-options
+        display: none
+
+    h2.name
+        color: var(--primary-hover)
+        font-weight: bold
+        font-size: 14px
+
+        a
+            color: currentColor
+
+    .sku
+        color: var(--color)
+        text-transform: uppercase
+        font-weight: medium
+        font-size: 12px
+
+    .product-cart-price
+        color: var(--primary-hover)
+        font-weight: bold
+        font-size: 18px
+
+    .product-cart-total
+        color: var(--secundary)
+        font-weight: bold
+        font-size: 18px
+
+.cart-product-line
+    border: 0
+
+    &:not(:first-child)
+        border-top: solid 1px var(--border-color)
+
+.cart-boxes
+    margin-top: 20px
+    background: var(--primary-hover)
+
+    @media media-max-lg
+        margin-right: -16px
+        margin-left: -16px
+
+    @media media-min-lg
+        display: flex
+        border-radius: 3px
+
+        .shipping
+            flex: 0 1 375px
+
+.cart
+    .page-title
+        h1
+            color: var(--secundary)
+            font-weight: bold
+            font-size: 18px
+
+    .totals
+        box-shadow: none
+
+        > .title
+            color: var(--secundary)
+            font-weight: bold
+            font-size: 14px
+
+        &, &__content, table
+            background: none
+            color: var(--primary-contrast)
+
+        table
+            tbody
+                th, td
+                    color: var(--primary-contrast)
+
+    button
+        &.btn--outline, &.btn-checkout
+            @media media-min-lg
+                width: 270px
+
+        &.btn--outline
+            border: 0
+            background: #ebebeb
+            box-shadow: none
+            color: var(--primary-hover)
+            text-transform: none
+            font-weight: bold
+            font-size: 14px
+
+        &.btn-checkout
+            background: var(--secundary)
+            color: var(--secundary-contrast)
+            text-transform: none
+            font-weight: bold
+            font-size: 18px
+
+.crosssell
+    display: none
+
+.wrap-links
+    display: flex
+    justify-content: space-between
+    margin: 20px 0
+
+    @media media-max-lg
+        margin: 20px -16px
