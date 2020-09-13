@@ -12008,6 +12008,23 @@ body {
 .frete__actions .btn:hover {
   background: none;
 }
+.frete__results {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-top: 25vh;
+  margin-left: 25vw;
+  width: 50vw;
+  height: 50vh;
+}
+@media (max-width: 568px) {
+  .frete__results {
+    margin-top: 3.75rem;
+    margin-left: 0;
+    width: 100%;
+    height: calc(100% - 3.75rem);
+  }
+}
 
 .gallery {
   margin-top: 3.13rem;
@@ -12089,9 +12106,27 @@ body {
   }
 }
 
+.modal {
+  background: rgba(255,255,255,0.5);
+}
+.modal__close {
+  top: 0;
+  bottom: auto;
+  background: none;
+  box-shadow: none;
+  color: var(--secundary);
+}
+.modal__close:hover {
+  background: none;
+  color: var(--primary);
+}
+.modal__box {
+  padding-top: 2.75rem;
+  border: solid 1px #ecedf2;
+}
+
 .msg-login {
   display: none;
-  align-items: center;
   padding: 0.63rem;
   border-radius: 3px;
   background: var(--secundary);
@@ -12099,8 +12134,13 @@ body {
   font-weight: 700;
   font-size: 0.81rem;
 }
+@media (min-width: 993px) {
+  .msg-login {
+    max-width: 240px;
+  }
+}
 body:not(.user-logged) .msg-login {
-  display: flex;
+  display: block;
 }
 .products__case:hover .msg-login {
   background: var(--primary);
@@ -12113,7 +12153,13 @@ body:not(.user-logged) .msg-login {
 .products__case:hover .msg-login .icon {
   color: var(--secundary);
 }
-.msg-login div {
+.msg-login a {
+  display: flex;
+  align-items: center;
+  color: currentColor;
+}
+.msg-login span {
+  display: block;
   flex: 1 1 0%;
 }
 
@@ -12163,6 +12209,7 @@ body:not(.user-logged) .msg-login {
   border-radius: 0 !important;
   background: none;
   box-shadow: none;
+  color: var(--primary-contrast);
   font-weight: 400;
   font-size: 0.81rem;
 }
@@ -12177,6 +12224,18 @@ body:not(.user-logged) .msg-login {
 }
 .newsletter .input-text::placeholder {
   color: var(--primary-contrast);
+}
+.newsletter .input-text:focus::-moz-placeholder {
+  color: transparent;
+}
+.newsletter .input-text:focus:-ms-input-placeholder {
+  color: transparent;
+}
+.newsletter .input-text:focus::-ms-input-placeholder {
+  color: transparent;
+}
+.newsletter .input-text:focus::placeholder {
+  color: transparent;
 }
 .newsletter .std {
   color: currentColor;
@@ -12368,12 +12427,6 @@ body:not(.user-logged) .msg-login {
 }
 .product__brand a {
   color: currentColor;
-}
-.product__brand a:before {
-  content: attr(title);
-}
-.product__brand img {
-  display: none;
 }
 .product__name {
   color: var(--primary-hover);
@@ -12747,11 +12800,69 @@ body:not(.user-logged) .msg-login {
   font-weight: 700;
   font-size: 1.13rem;
 }
+@media (min-width: 993px) {
+  .cart-table .th {
+    flex: 0 1 15%;
+    min-height: 1px;
+  }
+  .cart-table .th.cart-product-head {
+    flex: 0 1 65%;
+    order: -2;
+    max-width: 650px;
+  }
+  .cart-table .th:nth-child(2) {
+    order: -2;
+  }
+  .cart-table .th:nth-child(3) {
+    text-align: center;
+  }
+  .cart-table .th:nth-child(4) {
+    order: -1;
+    text-align: center;
+  }
+}
+@media (min-width: 993px) {
+  .cart-table .btn-remove {
+    flex: 0 0 auto;
+    margin-left: auto;
+  }
+}
+@media (min-width: 993px) {
+  .cart-table .product-info {
+    flex: 1;
+    min-width: 0;
+  }
+}
+@media (min-width: 993px) {
+  .cart-table .product-cart-image {
+    order: -2;
+    max-width: 650px;
+  }
+}
+@media (min-width: 993px) {
+  .cart-table .column-change-product {
+    order: -2;
+  }
+}
+@media (min-width: 993px) {
+  .cart-table .product-cart-actions {
+    order: -1;
+  }
+}
 .cart-product-line {
   border: 0;
 }
 .cart-product-line:not(:first-child) {
   border-top: solid 1px var(--border-color);
+}
+@media (min-width: 993px) {
+  .cart-product-line > div {
+    flex: 0 1 15%;
+    min-height: 1px;
+  }
+  .cart-product-line > div:first-child {
+    flex: 0 1 65%;
+  }
 }
 .cart-boxes {
   margin-top: 1.25rem;
@@ -12780,10 +12891,23 @@ body:not(.user-logged) .msg-login {
 .cart .totals {
   box-shadow: none;
 }
+@media (min-width: 993px) {
+  .cart .totals {
+    flex: 1 1 auto;
+    margin-left: auto;
+    min-width: 0;
+    max-width: 276px;
+  }
+}
 .cart .totals > .title {
   color: var(--secundary);
   font-weight: 700;
   font-size: 0.88rem;
+}
+@media (min-width: 993px) {
+  .cart .totals > .title {
+    display: none;
+  }
 }
 .cart .totals,
 .cart .totals__content,
@@ -12791,9 +12915,43 @@ body:not(.user-logged) .msg-login {
   background: none;
   color: var(--primary-contrast);
 }
+@media (min-width: 993px) {
+  .cart .totals table tbody,
+  .cart .totals table tfoot {
+    flex: 1;
+    min-width: 0;
+  }
+}
+@media (min-width: 993px) {
+  .cart .totals table td {
+    display: block;
+  }
+  .cart .totals table td:first-child {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .cart .totals table td:last-child {
+    padding-bottom: 0;
+  }
+}
 .cart .totals table tbody th,
 .cart .totals table tbody td {
   color: var(--primary-contrast);
+}
+.cart .totals table tfoot td:first-child strong {
+  display: none;
+}
+.cart .totals table tfoot td:first-child:before {
+  color: var(--secundary);
+  content: 'Total';
+  font-weight: 700;
+  font-size: 0.88rem;
+}
+@media (min-width: 993px) {
+  .cart .totals .totals__table {
+    display: flex;
+    align-items: center;
+  }
 }
 @media (min-width: 993px) {
   .cart button.btn--outline,
@@ -12888,6 +13046,128 @@ body:not(.user-logged) .msg-login {
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
   }
+}
+
+.page-layout {
+  text-align: center;
+}
+.page-layout__header {
+  display: flex;
+  flex-flow: column nowrap;
+  margin-bottom: 1.88rem;
+  background: url("@img(page-layout)");
+  background-size: cover;
+}
+.page-layout__title,
+.page-layout__video,
+.page-layout__main {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 100%;
+  width: 53.44rem;
+}
+.page-layout__video {
+  margin-bottom: -1.25rem !important;
+}
+.page-layout__title {
+  padding: 4.38rem 0 0.63rem;
+  color: var(--secundary);
+  font-weight: 700;
+  font-size: 2.25rem !important;
+  line-height: 1.4;
+}
+.page-layout__title span {
+  display: block;
+  color: var(--primary-contrast);
+  line-height: 1.4;
+}
+.page-layout__subtitle {
+  margin-bottom: 0.63rem !important;
+  padding: 2.5rem 0 0.63rem;
+  color: var(--primary-hover);
+  font-weight: 700;
+  font-size: 1.63rem !important;
+}
+.page-layout__description {
+  padding-bottom: 1.25rem;
+  color: var(--secundary);
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+.page-layout__main .form-list {
+  text-align: left;
+}
+.page-layout__main .form-list .required {
+  opacity: 1;
+}
+.page-layout__main .form-list .required em {
+  display: none;
+}
+.page-layout__main .form-list .fields {
+  display: block;
+}
+.page-layout__main .form-list .field {
+  display: flex;
+  align-items: center;
+}
+.page-layout__main .form-list .field label {
+  margin-bottom: 0;
+  width: 5.94rem;
+  color: var(--primary-hover);
+  font-weight: 700;
+  font-size: 0.88rem;
+}
+.page-layout__main .form-list .field label > span {
+  display: block;
+  color: #b9b9b9;
+  text-transform: lowercase;
+  font-weight: 500;
+}
+.page-layout__main .form-list .field label > span span {
+  color: var(--secundary);
+  text-transform: uppercase;
+}
+.page-layout__main .form-list .field div {
+  flex: 1;
+  min-width: 0;
+}
+.page-layout__main .form-list .field div input {
+  box-shadow: none;
+}
+.page-layout__main .forms__actions {
+  padding: 1.25rem 0 3.13rem;
+}
+.page-layout__main .forms__actions .required {
+  display: none;
+}
+.page-layout__main .forms__actions .btn {
+  margin: 0 auto;
+  max-width: 100%;
+  width: 25rem;
+  background: var(--primary-hover);
+  color: var(--primary-contrast);
+  font-weight: 700;
+  font-size: 1.13rem;
+}
+.page-layout__main .forms__actions .btn span {
+  display: none;
+}
+.page-layout__main .forms__actions .btn:before {
+  content: 'Enviar Dados';
+}
+
+.opc .header {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+}
+.opc .header .logo {
+  flex: 0 0 auto;
+  margin: 0 auto;
+}
+.opc .header-container {
+  background: #fff;
 }
 
 .catalog-product-view {
@@ -13019,6 +13299,7 @@ body:not(.user-logged) .msg-login {
   color: var(--primary-hover);
   font-weight: 700;
   font-size: 1rem;
+  cursor: pointer;
 }
 .prod__tabs-tab--actived {
   color: var(--secundary);

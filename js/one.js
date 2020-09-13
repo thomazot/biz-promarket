@@ -1379,6 +1379,11 @@ $j(document)
         if (bannerCategoria.length) {
             $('.header-container').after(bannerCategoria)
         }
+
+        $('.prod__tabs-content a').click(function (event) {
+            event.preventDefault()
+            modal_open('prod-description')
+        })
     })
     .on('resizeStop', function (e) {
         // Safe window.resize

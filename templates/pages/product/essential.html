@@ -3,12 +3,12 @@
     @selos
 
     <div class="prod__tabs">
-        <h3 class="prod__tabs-tab prod__tabs-tab--actived">Ficha Técnica</h3>
+        <h3 onclick="modal_open('prod-description')" class="prod__tabs-tab prod__tabs-tab--actived">Ficha Técnica</h3>
         <div class="prod__tabs-content prod__tabs-content--actived">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
             <a href="#">Ver descrição completa</a>
         </div>
-        <h3 class="prod__tabs-tab">Videos</h3>
+        <h3 onclick="modal_open('prod-videos')" class="prod__tabs-tab">Videos</h3>
         <div class="prod__tabs-content">
             video
         </div>
@@ -36,7 +36,15 @@
 			@preco(parcelado)	
         
             @bt(comprar)
-        
+            <div class="msg-login">
+                <a href="/customer/account/login/">
+                    <i class="icon icon-user"></i>
+                    <span>
+                        Faça o Login ou Cadastre-se
+                        para ver o valor do produto
+                    </span>
+                </a>
+            </div>
             @simulador-frete
 		@else(is_disponivel)		
 			<div class="prod__esgotado">
@@ -46,3 +54,13 @@
 		@endif(is_disponivel)
 	</div>
 </div>
+
+<div style="display:none" id="prod-description">
+    @descricao
+</div>
+<script>modal('prod-description')</script>
+
+<div style="display:none" id="prod-videos">
+    videos
+</div>
+<script>modal('prod-videos')</script>
