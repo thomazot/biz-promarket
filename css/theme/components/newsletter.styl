@@ -13,11 +13,15 @@
         border-radius: 0 !important
         background: none
         box-shadow: none
+        color: var(--primary-contrast)
         font-weight: regular
         font-size: 13px
 
         &::placeholder
-            color: var(--primary-contrast)
+            color: @color
+
+        &:focus::placeholder
+            color: transparent
 
     .std
         color: currentColor

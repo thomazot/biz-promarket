@@ -8,11 +8,13 @@
 	<a href="@url" title="@nome(60)" class="product__name">@nome</a>
 
     <div class="msg-login">
-        <i class="icon icon-user"></i>
-        <div>
-            Faça o Login ou Cadastre-se
-            para ver o valor do produto
-        </div>
+        <a href="/customer/account/login/">
+            <i class="icon icon-user"></i>
+            <span>
+                Faça o Login ou Cadastre-se
+                para ver o valor do produto
+            </span>
+        </a>
     </div>
 
 	@if(is_disponivel)

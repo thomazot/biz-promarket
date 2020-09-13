@@ -36,7 +36,15 @@
 			@preco(parcelado)	
         
             @bt(comprar)
-        
+            <div class="msg-login">
+                <a href="/customer/account/login/">
+                    <i class="icon icon-user"></i>
+                    <span>
+                        Faça o Login ou Cadastre-se
+                        para ver o valor do produto
+                    </span>
+                </a>
+            </div>
             @simulador-frete
 		@else(is_disponivel)		
 			<div class="prod__esgotado">

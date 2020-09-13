@@ -43,11 +43,62 @@
         font-weight: bold
         font-size: 18px
 
+    .th
+        @media media-min-lg
+            flex: 0 1 15%
+            min-height: 1px
+
+            &.cart-product-head
+                flex: 0 1 65%
+                order: -2
+                max-width: 650px
+
+            &:nth-child(2)
+                order: -2
+
+            &:nth-child(3)
+                text-align: center
+
+            &:nth-child(4)
+                order: -1
+                text-align: center
+
+    .btn-remove
+        @media media-min-lg
+            flex: 0 0 auto
+            margin-left: auto
+
+    .product-info
+        @media media-min-lg
+            flex: 1
+            min-width: 0
+
+    .product-cart-image
+        @media media-min-lg
+            order: -2
+            max-width: 650px
+
+    .column-change-product
+        @media media-min-lg
+            order: -2
+
+    .product-cart-actions
+        @media media-min-lg
+            order: -1
+
 .cart-product-line
     border: 0
 
     &:not(:first-child)
         border-top: solid 1px var(--border-color)
+
+    > div
+        @media media-min-lg
+            flex: 0 1 15%
+            min-height: 1px
+
+            &:first-child
+                flex: 0 1 65%
 
 .cart-boxes
     margin-top: 20px
@@ -74,19 +125,61 @@
     .totals
         box-shadow: none
 
+        @media media-min-lg
+            flex: 1 1 auto
+            margin-left: auto
+            min-width: 0
+            max-width: 276px
+
         > .title
             color: var(--secundary)
             font-weight: bold
             font-size: 14px
+
+            @media media-min-lg
+                display: none
 
         &, &__content, table
             background: none
             color: var(--primary-contrast)
 
         table
+            tbody, tfoot
+                @media media-min-lg
+                    flex: 1
+                    min-width: 0
+
+            td
+                @media media-min-lg
+                    display: block
+
+                    &:first-child
+                        padding-top: 0
+                        padding-bottom: 0
+
+                    &:last-child
+                        padding-bottom: 0
+
             tbody
                 th, td
                     color: var(--primary-contrast)
+
+            tfoot
+                td
+                    &:first-child
+                        strong
+                            display: none
+
+                        &:before
+                            color: var(--secundary)
+                            content: 'Total'
+                            font-weight: bold
+                            font-size: 14px
+
+        .totals__table
+            @media media-min-lg
+                display: flex
+                align-items: center
 
     button
         &.btn--outline, &.btn-checkout

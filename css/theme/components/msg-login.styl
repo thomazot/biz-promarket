@@ -1,6 +1,5 @@
 .msg-login
     display: none
-    align-items: center
     padding: 10px
     border-radius: 3px
     background: var(--secundary)
@@ -8,8 +7,11 @@
     font-weight: bold
     font-size: 13px
 
+    @media media-min-lg
+        max-width: 240px
+
     body:not(.user-logged) &
-        display: flex
+        display: block
 
     .products__case:hover &
         background: var(--primary)
@@ -22,5 +24,11 @@
         .products__case:hover &
             color: var(--secundary)
 
-    div
+    a
+        display: flex
+        align-items: center
+        color: currentColor
+
+    span
+        display: block
         flex: 1 1 0%
