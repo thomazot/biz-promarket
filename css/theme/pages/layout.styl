@@ -1,0 +1,106 @@
+.page-layout
+    text-align: center
+
+    &__header
+        display: flex
+        flex-flow: column nowrap
+        margin-bottom: 30px
+        background: url(page-layout)
+        background-size: cover
+
+    &__title, &__video, &__main
+        display: block
+        margin-right: auto
+        margin-left: auto
+        max-width: 100%
+        width: 855px
+
+    &__video
+        margin-bottom: -20px !important
+
+    &__title
+        padding: 70px 0 10px
+        color: var(--secundary)
+        font-weight: bold
+        font-size: 36px !important
+        line-height: 1.4
+
+        span
+            display: block
+            color: var(--primary-contrast)
+            line-height: 1.4
+
+    &__subtitle
+        margin-bottom: 10px !important
+        padding: 40px 0 10px
+        color: var(--primary-hover)
+        font-weight: bold
+        font-size: 26px !important
+
+    &__description
+        padding-bottom: 20px
+        color: var(--secundary)
+        font-weight: bold
+        font-size: 20px
+
+    &__main
+        .form-list
+            text-align: left
+
+            .required
+                opacity: 1
+
+                em
+                    display: none
+
+            .fields
+                display: block
+
+            .field
+                display: flex
+                align-items: center
+
+                label
+                    margin-bottom: 0
+                    width: 95px
+                    color: var(--primary-hover)
+                    font-weight: bold
+                    font-size: 14px
+
+                    > span
+                        display: block
+                        color: #b9b9b9
+                        text-transform: lowercase
+                        font-weight: medium
+
+                        span
+                            color: var(--secundary)
+                            text-transform: uppercase
+
+                div
+                    flex: 1
+                    min-width: 0
+
+                    input
+                        box-shadow: none
+
+        .forms__actions
+            padding: 20px 0 50px
+
+            .required
+                display: none
+
+            .btn
+                margin: 0 auto
+                max-width: 100%
+                width: 400px
+                background: var(--primary-hover)
+                color: var(--primary-contrast)
+                font-weight: bold
+                font-size: 18px
+
+                span
+                    display: none
+
+                &:before
+                    content: 'Enviar Dados'
