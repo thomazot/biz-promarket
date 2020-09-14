@@ -12877,6 +12877,7 @@ body:not(.user-logged) .msg-login {
 @media (min-width: 993px) {
   .cart-boxes {
     display: flex;
+    align-items: flex-start;
     border-radius: 3px;
   }
   .cart-boxes .shipping {
