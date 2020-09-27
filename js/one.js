@@ -1384,6 +1384,22 @@ $j(document)
             event.preventDefault()
             modal_open('prod-description')
         })
+
+        var categories = $('.header .categories .ul--0')
+        if (categories.length) {
+            var items = `<li class="li--0 home"><a class="a--0 home" href="/" title="home"><span>Home</span></a></li>
+            <li class="li--0 layouts"><a class="a--0 layouts" href="/layout" title="Layouts"><span>Layouts</span></a></li>`
+
+            categories.prepend(items)
+        }
+
+        var categories = $('.header .categories .all-ul--0')
+        if (categories.length) {
+            var items = `<li class="all-li--0 home"><a class="all-a--0 home" href="/" title="home"><span>Home</span></a></li>
+            <li class="all-li--0 layouts"><a class="all-a--0 layouts" href="/layout" title="Layouts"><span>Layouts</span></a></li>`
+
+            categories.prepend(items)
+        }
     })
     .on('resizeStop', function (e) {
         // Safe window.resize
