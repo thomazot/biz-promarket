@@ -1,7 +1,25 @@
 .categories
     --background: #f9f9f9
 
+    .li--0, .all-li--0
+        order: 2
+
+        &.home
+            order: 1
+
+        &.layouts
+            order: 3
+
+    .all-li--0
+        flex: 0 0 100%
+        width: 100%
+
 @media media-max-lg
+    .categories--mobi .all-ul--0
+        display: flex
+        flex: 0 0 100%
+        flex-flow: column nowrap
+
     .categories
         &__show
             order: -1
